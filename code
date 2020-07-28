@@ -1,0 +1,6 @@
+import urllib.request, json
+
+with urllib.request.urlopen("http://www.reddit.com/r/PewdiepieSubmissions/about.json") as url:
+    data = json.loads(url.read().decode())
+moredata = data['data']
+print(moredata['accounts_active'])
